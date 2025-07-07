@@ -1,0 +1,26 @@
+{
+  "name": "Gmail Automations Dev Environment (Alpine)",
+  "image": "node:lts-alpine",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": false,
+      "installOhMyZsh": false,
+      "upgradePackages": true,
+      "username": "automatic",
+      "uid": "automatic",
+      "gid": "automatic"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.vscode-typescript-next",
+        "GitHub.copilot",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "postCreateCommand": "sudo npm install -g @google/clasp && npm install",
+  "remoteUser": "node"
+}

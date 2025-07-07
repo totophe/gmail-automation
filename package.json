@@ -1,0 +1,17 @@
+{
+  "name": "gmail-automation",
+  "version": "1.0.0",
+  "description": "Gmail automation scripts using Google Apps Script - includes invoice forwarding and more",
+  "scripts": {
+    "build-config": "node generate-config.js",
+    "push": "npm run build-config && /usr/local/bin/clasp push",
+    "deploy": "/usr/local/bin/clasp create-deployment",
+    "pull": "/usr/local/bin/clasp pull",
+    "logs": "/usr/local/bin/clasp tail-logs",
+    "open": "/usr/local/bin/clasp open-script"
+  },
+  "devDependencies": {
+    "@google/clasp": "^2.4.2",
+    "@types/google-apps-script": "^1.0.76"
+  }
+}
